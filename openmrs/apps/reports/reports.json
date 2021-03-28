@@ -1,0 +1,324 @@
+{
+   "visitReport": {
+    "name": "Visit Report",
+    "type": "MRSGeneric",
+    "config": {
+      "sqlPath": "/var/www/bahmni_config/openmrs/apps/reports/sql/visitReport.sql"
+    }
+},
+ "serviceWiseMoneyReceiptReport": {
+    "name": "Service Wise Report",
+    "type": "MRSGeneric",
+    "config": {
+      "sqlPath": "/var/www/bahmni_config/openmrs/apps/reports/sql/serviceWiseReport.sql"
+    }
+},
+    "observationReport":{
+    "name": "Chief Complaint Wise Report",
+    "type": "observations",
+    "config": {
+        "patientAttributes": [],
+        "patientAddresses": [],
+        "visitAttributes": [],
+        "showVisitInfo": true,
+        "showProvider": false,
+        "programsToFilter": [],
+        "conceptNamesToFilter": ["Chief Complaint"],
+        "conceptValuesToFilter":[],
+        "conceptClassesToFilter": [],
+        "locationTagsToFilter": [],
+        "applyDateRangeFor": "obsDatetime",
+        "encounterPerRow": false,
+        "forDataAnalysis": false,
+        "visitTypesToFilter": ["OPD"],
+        "excludeColumns": ["Program Name","Birth date","Location Name","Program Enrollment Date","Program End Date","Patient Created Date","Observation Datetime","Observation Date","Observation Created Date","National Id","Provider","Age group name","Parent Concept"],
+        "additionalPatientIdentifiers": ["National Id"],
+        "ignoreEmptyValues": false,
+        "conceptNameDisplayFormat": "shortNamePreferred",
+        "ageGroupName":"Age group name"
+    }
+},
+  "observationReportHighRisk":{
+    "name": "High Risk Pregnant Mothers List",
+    "type": "observations",
+    "config": {
+        "patientAttributes": ["MobileNo"],
+        "patientAddresses": [],
+        "visitAttributes": [],
+        "showVisitInfo": true,
+        "showProvider": false,
+        "programsToFilter": [],
+        "conceptNamesToFilter": ["Risk level of pregnant women"],
+        "conceptValuesToFilter":["High","Very High"],
+        "conceptClassesToFilter": [],
+        "locationTagsToFilter": [],
+        "applyDateRangeFor": "obsDatetime",
+        "encounterPerRow": false,
+        "forDataAnalysis": false,
+        "visitTypesToFilter": ["OPD"],
+        "excludeColumns": ["Program Name","Birth date","Location Name","Program Enrollment Date","Program End Date","Patient Created Date","Observation Datetime","Observation Date","Observation Created Date","National Id","Provider","Age group name","Parent Concept"],
+        "additionalPatientIdentifiers": ["National Id"],
+        "ignoreEmptyValues": false,
+        "conceptNameDisplayFormat": "shortNamePreferred",
+        "ageGroupName":"Age group name"
+    }
+},
+  "observationReportBloodPressure":{
+    "name": "Clients High Pressure Report",
+    "type": "observations",
+    "config": {
+        "patientAttributes": ["MobileNo"],
+        "patientAddresses": [],
+        "visitAttributes": [],
+        "showVisitInfo": true,
+        "showProvider": false,
+        "programsToFilter": [],
+        "conceptNamesToFilter": ["Blood Pressure"],
+        "conceptValuesToFilter":["80..160"],
+        "conceptClassesToFilter": [],
+        "locationTagsToFilter": [],
+        "applyDateRangeFor": "obsDatetime",
+        "encounterPerRow": false,
+        "forDataAnalysis": false,
+        "visitTypesToFilter": ["OPD"],
+        "excludeColumns": ["Program Name","Birth date","Location Name","Program Enrollment Date","Program End Date","Patient Created Date","Observation Datetime","Observation Date","Observation Created Date","National Id","Provider","Age group name","Parent Concept"],
+        "additionalPatientIdentifiers": ["National Id"],
+        "ignoreEmptyValues": false,
+        "conceptNameDisplayFormat": "shortNamePreferred",
+        "ageGroupName":"Age group name"
+    }
+},
+  "followUpObservationReport":{
+    "name": "Client Follow-up report",
+    "type": "MRSGeneric",
+    "config": {
+        "sqlPath": "/var/www/bahmni_config/openmrs/apps/reports/sql/observationFormsWithFormName.sql"
+    }
+},
+    "formBuilderReport":{
+        "name": "Client History Report",
+        "type": "formBuilder",
+        "config": {
+            "patientAttributes": [
+            ],
+            "patientAddresses": [
+            ],
+            "visitAttributes": [
+                "Visit Status"
+            ],
+            "showVisitInfo": false,
+            "showProvider": false,
+            "formNamesToFilter": ["Client History"],
+            "conceptNameDisplayFormat": "shortNamePreferred",
+            "locationTagsToFilter": [],
+            "programsToFilter": [],
+            "excludeColumns": ["Birthdate","Location Name"],
+            "applyDateRangeFor": "obsDate",
+            "visitTypesToFilter": []
+        }
+    },
+    "formBuilderReportOfInwardReferral":{
+        "name": "Inward Referral Report",
+        "type": "formBuilder",
+        "config": {
+            "patientAttributes": [
+            ],
+            "patientAddresses": [
+            ],
+            "visitAttributes": [
+                "Visit Status"
+            ],
+            "showVisitInfo": false,
+            "showProvider": false,
+            "formNamesToFilter": ["Inward Referral"],
+            "conceptNameDisplayFormat": "shortNamePreferred",
+            "locationTagsToFilter": [],
+            "programsToFilter": [],
+            "excludeColumns": ["Birthdate","Location Name"],
+            "applyDateRangeFor": "obsDate",
+            "visitTypesToFilter": []
+        }
+    },
+    "formBuilderReportOfOutwardReferral":{
+        "name": "Outward Referral Report",
+        "type": "formBuilder",
+        "config": {
+            "patientAttributes": [
+            ],
+            "patientAddresses": [
+            ],
+            "visitAttributes": [
+                "Visit Status"
+            ],
+            "showVisitInfo": false,
+            "showProvider": false,
+            "formNamesToFilter": ["Outward Referral"],
+            "conceptNameDisplayFormat": "shortNamePreferred",
+            "locationTagsToFilter": [],
+            "programsToFilter": [],
+            "excludeColumns": ["Birthdate","Location Name"],
+            "applyDateRangeFor": "obsDate",
+            "visitTypesToFilter": []
+        }
+    },
+    "formBuilderReportOfFollowuP":{
+    "name": "Follow Up Report",
+    "type": "MRSGeneric",
+    "config": {
+      "sqlPath": "/var/www/bahmni_config/openmrs/apps/reports/sql/followUpFormReport.sql"
+    }
+},
+    "programReport":{
+    "name": "Pregnancy Enrollment Program",
+    "type": "programs",
+    "config": {
+        "patientAttributes": [],
+        "patientAddresses": [],
+        "programAttributes": ["Visit Status","LMP Date","EDD"],
+        "programNamesToFilter": ["Pregnancy Enrollment"],
+
+        "forDataAnalysis": true,
+        "excludeColumns": ["Birthdate","Start Date","End Date","Program End Date","Visit Status","Patient Id","Current State","Program Id","Age group name"],
+        "additionalPatientIdentifiers": ["National Id"],
+        "additionalPatientIdentifiers": [],
+        "ageGroupName":"Age group name"
+    }
+},
+    "programReportpostpartum":{
+    "name": "Post-Partum Enrollment Program",
+    "type": "programs",
+    "config": {
+        "patientAttributes": [],
+        "patientAddresses": [],
+        "programAttributes": ["Visit Status","Delivery Date"],
+        "programNamesToFilter": ["Post-Partum Enrollment"],
+
+        "forDataAnalysis": true,
+        "excludeColumns": ["Birthdate","Start Date","End Date","Program End Date","Visit Status","Patient Id","Current State","Program Id","Age group name"],
+        "additionalPatientIdentifiers": ["National Id"],
+        "additionalPatientIdentifiers": [],
+        "ageGroupName":"Age group name"
+    }
+},
+    "ReportOfDelivery":{
+        "name": "Delivery Report",
+        "type": "formBuilder",
+        "config": {
+            "patientAttributes": [
+            ],
+            "patientAddresses": [
+            ],
+            "visitAttributes": [
+            ],
+            "showVisitInfo": false,
+            "showProvider": false,
+            "formNamesToFilter": ["Delivery"],
+            "conceptNameDisplayFormat": "shortNamePreferred",
+            "locationTagsToFilter": [],
+            "programsToFilter": [],
+            "excludeColumns": ["Birthdate","Location Name","Fundal Height (Weeks)","Fetal Heart Rate","Fetal Presentation","Show","Post Delivery Followup Followed According to the Protocol","Pelvic Presentation"],
+            "applyDateRangeFor": "obsDate",
+            "visitTypesToFilter": []
+        }
+    },
+  "drugOrderReport": {
+    "name": "Drug Order report",
+    "type": "MRSGeneric",
+    "config": {
+      "sqlPath": "/var/www/bahmni_config/openmrs/apps/reports/sql/drugOrderReport.sql"
+    }
+},
+    "bloodPressure": {
+        "name": "Blood Pressure",
+        "type": "obsCount",
+        "config": {
+            "ageGroupName": "All Ages",
+            "conceptNames": [
+                "Systolic",
+                "Diastolic"
+            ],
+            "countOnlyClosedVisits": "false",
+            "countOncePerPatient": "false",
+            "visitTypes": [
+                "OPD",
+                "IPD"
+            ]
+        }
+    },
+    "pivotReportOfVisits": {
+        "name": "Gender wise visit report",
+        "type": "aggregation",
+        "config": {
+            "report":{
+                "type": "visits",
+                "config": {
+                    "forDataAnalysis": true,
+                    "patientAttributes": [
+                        "caste",
+                        "class",
+                        "education",
+                        "occupation",
+                        "primaryContact"
+                    ],
+                    "visitAttributes": [
+                        "Visit Status"
+                    ],
+                    "patientAddresses": [
+                        "address3",
+                        "city_village"
+                    ],
+                    "applyDateRangeFor": "visitStopDate",
+                    "visitTypesToFilter": [
+                        "IPD",
+                        "OPD"
+                    ]
+                }
+            },
+            "rowGroups": [
+                "Gender"
+            ],
+            "columnGroups": [
+                "Visit Status"
+            ],
+            "distinctGroups": [
+                "Patient Identifier"
+            ]
+        }
+    },
+  "GenericLabOrderReport": {
+    "name": "Lab Order Results",
+    "type": "labOrders",
+    "config": {
+      "patientAttributes": [
+      ],
+      "patientAddresses": [
+      ],
+      "visitAttributes": [
+        "Visit Status"
+      ],
+      "showVisitInfo": true,
+      "showProvider": false,
+      "programsToFilter": [],
+      "showReferredOutTests": true,
+      "conceptNamesToFilter": [
+      ],
+      "conceptValuesToFilter": [
+      ],
+      "forDataAnalysis": false,
+      "excludeColumns": [
+        "address3"
+      ],
+      "showOrderDateTime": true
+    }
+  },
+  "LabResultDetails": {
+    "name": "Lab Result Report",
+    "type": "MRSGeneric",
+    "config": {
+      "sqlPath": "/var/www/bahmni_config/openmrs/apps/reports/sql/labReport.sql"
+    }
+}
+
+
+
+}
